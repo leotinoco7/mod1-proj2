@@ -10,11 +10,7 @@ function sleep(milliseconds) {
     }
 }
 
-// DECLARED VARIABLES
 var rounds = 0;
-var winUser = 0;
-var winPc = 0;
-var playP = 0;
 
 // CODE START
 
@@ -57,6 +53,9 @@ do {
     }
 
     do {
+        var winUser = 0;
+        var winPc = 0;
+        var playP = 0;
         var rounds = +prompt(
             `${name}, digite a quantidade de rodadas que você deseja jogar (máximo de 100): `,
         );
