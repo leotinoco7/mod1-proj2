@@ -8,9 +8,9 @@ Projeto desenvolvido no curso de Full Stack da Blue EdTech, aonde o objetivo é 
 
 ## 🛠️ CONSTRUÍDO COM:
 
-Linguagem: JavaScript
-Motor: NodeJS
-Framework: JavaScript Vanilla
+Linguagem: JavaScript  
+Motor: NodeJS  
+Framework: JavaScript Vanilla  
 
 
 ## 📄 LICENÇA
