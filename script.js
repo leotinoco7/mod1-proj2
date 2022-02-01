@@ -1,6 +1,5 @@
-var prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')();
 
-// SLEEP FUNCTION
 function sleep(milliseconds) {
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
@@ -65,9 +64,10 @@ do {
 
     for (x = 0; x < rounds; x++) {
         do {
-            var playU = prompt(`Rodada ${x + 1} - Pedra, papel ou tesoura?: `);
+            var playU = prompt(
+                `Rodada ${x + 1} - Pedra, papel ou tesoura?: `,
+            ).toLowerCase();
             sleep(250);
-            var playU = playU.toLowerCase();
             while (
                 playU !== 'pedra' &&
                 playU !== 'papel' &&
@@ -79,7 +79,6 @@ do {
             }
 
             playP = Math.floor(Math.random() * 3) + 1;
-            // JOGOU PEDRA
             if (playU == 'pedra' && playP == 3) {
                 console.log('Computador escolheu: tesoura');
                 sleep(250);
@@ -98,7 +97,6 @@ do {
                 console.log('EMPATOU A RODADA!');
                 sleep(250);
             }
-            // JOGOU PAPEL
             if (playU == 'papel' && playP == 1) {
                 console.log('Computador escolheu: pedra');
                 sleep(250);
@@ -118,7 +116,6 @@ do {
                 sleep(250);
             }
 
-            // JOGOU TESOURA
             if (playU == 'tesoura' && playP == 2) {
                 console.log('Computador escolheu: papel');
                 sleep(250);
@@ -163,10 +160,10 @@ do {
     }
 
     do {
-        var replay = prompt('Deseja jogar novamente? ');
+        var replay = prompt('Deseja jogar novamente? ')
+            .toLowerCase()
+            .replace('ã', 'a');
         sleep(250);
-        var replay = replay.toLowerCase();
-        var replay = replay.replace('ã', 'a');
         while (replay !== 'sim' && replay !== 'nao') {
             console.log('Resposta inválida');
             sleep(250);
